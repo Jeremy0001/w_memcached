@@ -13,3 +13,7 @@ cookbook 'sudo'
 cookbook 'timezone-ii'
 
 cookbook 'memcached'
+
+group :wrapper do
+  cookbook 'w_memcached', path: './'
+end
