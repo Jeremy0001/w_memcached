@@ -8,14 +8,10 @@
 
 include_recipe 'memcached'
 
-firewall 'ufw' do
-  action :enable
-end
+firewall 'default'
 
 firewall_rule 'memcached' do
   port     11211
-  protocol :tcp
-  action   :allow
 end
 
 include_recipe 'w_memcached::monit' if node['monit_enabled']
