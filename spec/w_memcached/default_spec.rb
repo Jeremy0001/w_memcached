@@ -12,8 +12,8 @@ describe 'w_memcached::default' do
   end
 
   it 'enables firewall and runs resoruce firewall_rule to open port 11211' do
-  	expect(chef_run).to enable_firewall('ufw')
-    expect(chef_run).to allow_firewall_rule('memcached').with(port: 11211, protocol: :tcp)
+  	expect(chef_run).to install_firewall('default')
+    expect(chef_run).to create_firewall_rule('memcached').with(port: 11211)
   end
 
   it 'runs recipe w_memcached::monit' do
