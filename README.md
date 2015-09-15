@@ -1,4 +1,4 @@
-w_percona Cookbook
+w_memcached Cookbook
 ==================
 
 [![Build Status](https://travis-ci.org/haapp/w_memcached.svg?branch=master)](https://travis-ci.org/haapp/w_memcached)
