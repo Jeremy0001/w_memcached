@@ -12,7 +12,7 @@ cookbook 'ntp'
 cookbook 'sudo'
 cookbook 'timezone-ii'
 
-cookbook 'memcached'
+cookbook 'memcached', '~> 1.9.0' # due to https://github.com/haapp/w_memcached/issues/8
 
 group :wrapper do
   cookbook 'w_common', git: 'https://github.com/haapp/w_common.git'
